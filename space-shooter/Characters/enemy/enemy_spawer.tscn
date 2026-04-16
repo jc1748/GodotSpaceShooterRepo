@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://tagqeitalvu8"]
+
+[ext_resource type="Script" uid="uid://dns37tweib7pc" path="res://Characters/enemy/enemy_spawer.gd" id="1_p0qdv"]
+
+[node name="Enemy_Spawer" type="Node2D" unique_id=182010957]
+script = ExtResource("1_p0qdv")
+
+[node name="Positions" type="Node2D" parent="." unique_id=1666568740]
+
+[node name="Pos1" type="Marker2D" parent="Positions" unique_id=1885642159]
+position = Vector2(75, 0)
+
+[node name="Pos2" type="Marker2D" parent="Positions" unique_id=471941176]
+position = Vector2(166, 0)
+
+[node name="Pos3" type="Marker2D" parent="Positions" unique_id=1082782127]
+position = Vector2(254, 0)
+
+[node name="Pos4" type="Marker2D" parent="Positions" unique_id=225376662]
+position = Vector2(351, 0)
+
+[node name="Pos5" type="Marker2D" parent="Positions" unique_id=646298416]
+position = Vector2(449, 0)
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=2112075987]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
