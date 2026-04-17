@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://cp374h8dax5f7"]
+[gd_scene load_steps=3 format=3 uid="uid://cp374h8dax5f7"]
 
 [ext_resource type="Texture2D" uid="uid://cyjxpg3gxfwnu" path="res://Assets/playerShip1_blue.png" id="1_jnvls"]
-[ext_resource type="Script" uid="uid://cqvhgwrmg8ka" path="res://Characters/player/player.gd" id="1_vqf74"]
+[ext_resource type="Script" path="res://Characters/player/player.gd" id="1_vqf74"]
 
-[node name="Player" type="Area2D" unique_id=1535154077]
+[node name="Player" type="Area2D"]
 collision_layer = 2
 collision_mask = 21
 script = ExtResource("1_vqf74")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=662178861]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_jnvls")
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=164966331]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-23, 9, -7, 14, -4, 18, 4, 18, 6, 14, 23, 10, 23, -1, 18, 1, 5, -6, 4, -19, -4, -19, -5, -7, -5, -6, -18, 1, -23, -2)
 
-[node name="Muzzle" type="Marker2D" parent="." unique_id=1852043533]
+[node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(0, -31)
 
 [connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]

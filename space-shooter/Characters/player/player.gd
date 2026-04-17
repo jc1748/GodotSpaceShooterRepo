@@ -10,6 +10,8 @@ var speed = 300
 var input_vector = Vector2.ZERO
 
 var hp = 3
+var ammo_count = 5
+var max_ammo = ammo_count
 
 func _physics_process(delta: float) -> void:
 	input_vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")

@@ -1,22 +1,22 @@
-[gd_scene format=3 uid="uid://cxp2icw5g0eob"]
+[gd_scene load_steps=4 format=3 uid="uid://cxp2icw5g0eob"]
 
-[ext_resource type="Script" uid="uid://cxuforfgkp0ch" path="res://Characters/enemy/enemy.gd" id="1_eb2o7"]
+[ext_resource type="Script" path="res://Characters/enemy/enemy.gd" id="1_eb2o7"]
 [ext_resource type="Texture2D" uid="uid://dynyn84caivbu" path="res://Assets/ufoRed.png" id="2_ifcqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dnjbd"]
-radius = 45.044422
+radius = 45.0444
 
-[node name="Enemy_Collision" type="Area2D" unique_id=995600515 groups=["enemies"]]
+[node name="Enemy_Collision" type="Area2D" groups=["enemies"]]
 scale = Vector2(0.85, 0.85)
 collision_layer = 5
 collision_mask = 11
 script = ExtResource("1_eb2o7")
 
-[node name="Enemy_Sprite" type="Sprite2D" parent="." unique_id=2059680831]
-scale = Vector2(0.99999994, 0.99999994)
+[node name="Enemy_Sprite" type="Sprite2D" parent="."]
+scale = Vector2(1, 1)
 texture = ExtResource("2_ifcqv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=468646979]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dnjbd")
 
 [connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]

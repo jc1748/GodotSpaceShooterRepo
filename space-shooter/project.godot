@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="SpaceShooter"
-run/main_scene="uid://c2nfra1rgunwb"
-config/features=PackedStringArray("4.6", "Forward Plus")
+run/main_scene="res://world.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
