@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bau25rusx67r8" path="res://world.gd" id="1_036b0"]
 [ext_resource type="Texture2D" uid="uid://dru7it6hichd3" path="res://Assets/darkPurple.png" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://cp374h8dax5f7" path="res://Characters/player/player.tscn" id="2_fj7yv"]
-[ext_resource type="PackedScene" uid="uid://cxp2icw5g0eob" path="res://Characters/enemy/enemy.tscn" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://tagqeitalvu8" path="res://Characters/enemy/enemy_spawer.tscn" id="4_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://di4vjbv660a33" path="res://asteroid_spawner.tscn" id="6_dwbse"]
 
@@ -18,10 +17,6 @@ texture = ExtResource("1_f3sb7")
 [node name="Player" parent="." unique_id=273959161 instance=ExtResource("2_fj7yv")]
 position = Vector2(274, 830)
 
-[node name="Enemy" parent="." unique_id=1684431692 instance=ExtResource("3_tlwt5")]
-visible = false
-position = Vector2(256, 73)
-
 [node name="Enemy_Spawer" parent="." unique_id=1573530991 instance=ExtResource("4_aqk2v")]
 position = Vector2(16, 10)
 scale = Vector2(1.00382, 1)
@@ -31,9 +26,9 @@ position = Vector2(7, 10)
 
 [node name="Score" type="Label" parent="." unique_id=458921157]
 offset_left = 16.0
-offset_top = 59.0
+offset_top = 72.0
 offset_right = 68.0
-offset_bottom = 82.0
+offset_bottom = 95.0
 scale = Vector2(1.48, 1.52)
 text = "Score: "
 

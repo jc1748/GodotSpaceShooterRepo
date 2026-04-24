@@ -1,21 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cngnsr7s06npg"]
+[gd_scene format=3 uid="uid://cngnsr7s06npg"]
 
-[ext_resource type="Script" path="res://Projectiles/player_laser.gd" id="1_aknpy"]
-[ext_resource type="Texture2D" uid="uid://86sclxodqwk3" path="res://Assets/laserBlue05.png" id="2_g0lww"]
+[ext_resource type="Script" uid="uid://dgthym74q2fns" path="res://Projectiles/player_laser.gd" id="1_aknpy"]
+[ext_resource type="Texture2D" uid="uid://n8crk72jjqrm" path="res://Assets/pill_red.png" id="2_aknpy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k5jgu"]
-radius = 4.0
-height = 38.0
+radius = 7.0
+height = 26.0
 
-[node name="PlayerLaser" type="Area2D"]
+[node name="PlayerLaser" type="Area2D" unique_id=1391205783]
 collision_layer = 8
 collision_mask = 5
 script = ExtResource("1_aknpy")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_g0lww")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980277677]
+rotation = -0.7642402
+texture = ExtResource("2_aknpy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1343800172]
 shape = SubResource("CapsuleShape2D_k5jgu")
 
 [connection signal="area_entered" from="." to="." method="_on_PlayerLaser_area_entered"]
