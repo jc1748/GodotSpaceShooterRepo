@@ -1,43 +1,48 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2nfra1rgunwb"]
+[gd_scene format=3 uid="uid://c2nfra1rgunwb"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_036b0"]
+[ext_resource type="Script" uid="uid://bau25rusx67r8" path="res://world.gd" id="1_036b0"]
 [ext_resource type="Texture2D" uid="uid://dru7it6hichd3" path="res://Assets/darkPurple.png" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://cp374h8dax5f7" path="res://Characters/player/player.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://cxp2icw5g0eob" path="res://Characters/enemy/enemy.tscn" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://tagqeitalvu8" path="res://Characters/enemy/enemy_spawer.tscn" id="4_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://di4vjbv660a33" path="res://asteroid_spawner.tscn" id="6_dwbse"]
 
-[node name="world_node2D" type="Node2D"]
+[node name="world_node2D" type="Node2D" unique_id=978187375]
 script = ExtResource("1_036b0")
 
-[node name="background" type="Sprite2D" parent="."]
+[node name="background" type="Sprite2D" parent="." unique_id=953729236]
 position = Vector2(271, 476.5)
 scale = Vector2(2.20313, 3.81641)
 texture = ExtResource("1_f3sb7")
 
-[node name="Player" parent="." instance=ExtResource("2_fj7yv")]
+[node name="Player" parent="." unique_id=273959161 instance=ExtResource("2_fj7yv")]
 position = Vector2(274, 830)
 
-[node name="Enemy" parent="." instance=ExtResource("3_tlwt5")]
+[node name="Enemy" parent="." unique_id=1684431692 instance=ExtResource("3_tlwt5")]
 visible = false
 position = Vector2(256, 73)
 
-[node name="Enemy_Spawer" parent="." instance=ExtResource("4_aqk2v")]
+[node name="Enemy_Spawer" parent="." unique_id=1573530991 instance=ExtResource("4_aqk2v")]
 position = Vector2(16, 10)
 scale = Vector2(1.00382, 1)
 
-[node name="Score" type="Label" parent="."]
+[node name="AsteroidSpawner" parent="." unique_id=773919711 instance=ExtResource("6_dwbse")]
+position = Vector2(7, 10)
+
+[node name="Score" type="Label" parent="." unique_id=458921157]
 offset_left = 16.0
-offset_top = 40.0
-offset_right = 56.0
-offset_bottom = 63.0
+offset_top = 59.0
+offset_right = 68.0
+offset_bottom = 82.0
 scale = Vector2(1.48, 1.52)
 text = "Score: "
 
-[node name="AmmoCount" type="Label" parent="."]
+[node name="AmmoCount" type="Label" parent="." unique_id=532507789]
 offset_left = 17.0
-offset_top = 886.0
-offset_right = 74.0
-offset_bottom = 909.0
+offset_top = 26.0
+offset_right = 77.0
+offset_bottom = 49.0
+scale = Vector2(2.08, 2.12)
 text = "Ammo: "
 
 [connection signal="spawn_laser" from="Player" to="." method="_on_player_spawn_laser"]

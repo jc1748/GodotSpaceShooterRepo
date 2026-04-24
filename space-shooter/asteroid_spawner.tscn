@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://di4vjbv660a33"]
+
+[ext_resource type="Script" uid="uid://5qwpxv8ebip5" path="res://asteroid_spawner.gd" id="1_eiik5"]
+
+[node name="AsteroidSpawner" type="Node2D" unique_id=773919711]
+script = ExtResource("1_eiik5")
+
+[node name="Positions" type="Node2D" parent="." unique_id=1409755147]
+position = Vector2(1, 0)
+
+[node name="Pos1" type="Marker2D" parent="Positions" unique_id=485859413]
+position = Vector2(76, 0)
+
+[node name="Pos2" type="Marker2D" parent="Positions" unique_id=2066725439]
+position = Vector2(178, 1)
+
+[node name="Pos3" type="Marker2D" parent="Positions" unique_id=123806012]
+position = Vector2(267, 0)
+
+[node name="Pos4" type="Marker2D" parent="Positions" unique_id=853478657]
+position = Vector2(358, 0)
+
+[node name="Pos5" type="Marker2D" parent="Positions" unique_id=80515524]
+position = Vector2(461, 0)
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=289436632]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

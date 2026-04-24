@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhmp7qb3wm2jw"
-path="res://.godot/imported/laserRed03.png-d91d448987a6cd27b51214d207d24562.ctex"
+uid="uid://b6l7f71v3q577"
+path="res://.godot/imported/powerupRed_star.png-c867862116c66924334e27af06ee60b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/laserRed03.png"
-dest_files=["res://.godot/imported/laserRed03.png-d91d448987a6cd27b51214d207d24562.ctex"]
+source_file="res://Assets/powerupRed_star.png"
+dest_files=["res://.godot/imported/powerupRed_star.png-c867862116c66924334e27af06ee60b9.ctex"]
 
 [params]
 
